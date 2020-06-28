@@ -22,7 +22,7 @@ gem "turbolinks"<%= gemfile_requirement("turbolinks") %>
 <% end -%>
 gem "webpacker"<%= gemfile_requirement("webpacker") %>
 
-<% if authentication_system == 'yes' %>
+<% if @authentication_system == 'yes' %>
 gem 'pundit'
 gem 'device'
 <% end %>

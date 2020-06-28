@@ -135,7 +135,7 @@ def production_hostname
     ask_with_default("Production hostname?", :blue, "example.com")
 end
 
-def authentification_system
+def authentication_system
   @authentication_system ||=
     ask_with_default("Add authentication system ? (Devise + Pundit)", :blue, "yes")
 end
