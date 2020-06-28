@@ -135,6 +135,11 @@ def production_hostname
     ask_with_default("Production hostname?", :blue, "example.com")
 end
 
+def authentification_system
+  @authentication_system ||=
+    ask_with_default("Add authentication system ? (Devise + Pundit)", :blue, "yes")
+end
+
 def gemfile_requirement(name)
   @original_gemfile ||= IO.read("Gemfile")
   req = @original_gemfile[/gem\s+['"]#{name}['"]\s*(,[><~= \t\d\.\w'"]*)?.*$/, 1]
